@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Erran</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <a href="{{ url_for('welcome') }}" class="logo">Erran</a>
+    <div class="toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="dark-mode-toggle">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <div class="container">
+        <h1>Welcome to Erran</h1>
+        <h2>Your AI Career Advisor</h2>
+        <div class="button-container">
+            <form action="{{ url_for('home') }}">
+                <button type="submit">Chat with Erran</button>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='darkmode.js') }}"></script>
+</body>
+</html>
